@@ -6,47 +6,45 @@
 
 @layer base {
   :root {
-    /* Zavix brand — extracted from logo: steel blue/teal */
-    --background: 210 20% 98%;
-    --foreground: 200 25% 15%;
+    --background: 210 20% 99%;
+    --foreground: 210 40% 11%;
 
     --card: 0 0% 100%;
-    --card-foreground: 200 25% 15%;
+    --card-foreground: 210 40% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 200 25% 15%;
+    --popover-foreground: 210 40% 11%;
 
-    /* Primary: steel teal from logo */
-    --primary: 200 30% 30%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary: deep navy-teal matching logo */
+    --primary: 198 35% 28%;
+    --primary-foreground: 0 0% 98%;
 
-    /* Secondary: lighter steel */
-    --secondary: 200 15% 92%;
-    --secondary-foreground: 200 25% 20%;
+    --secondary: 210 18% 93%;
+    --secondary-foreground: 210 30% 18%;
 
-    --muted: 210 15% 94%;
-    --muted-foreground: 200 10% 45%;
+    --muted: 210 14% 95%;
+    --muted-foreground: 210 10% 46%;
 
-    /* Accent: warm amber for CTAs */
-    --accent: 36 90% 55%;
+    /* Accent: refined teal — cohesive with logo, no orange */
+    --accent: 186 55% 42%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 210 15% 88%;
-    --input: 210 15% 88%;
-    --ring: 200 30% 30%;
+    --border: 210 16% 90%;
+    --input: 210 16% 90%;
+    --ring: 198 35% 28%;
 
-    --radius: 0.625rem;
+    --radius: 0.5rem;
 
     /* Custom tokens */
-    --gradient-brand: linear-gradient(135deg, hsl(200, 30%, 25%) 0%, hsl(200, 35%, 40%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(36, 90%, 55%) 0%, hsl(28, 85%, 50%) 100%);
-    --gradient-surface: linear-gradient(180deg, hsl(210, 20%, 98%) 0%, hsl(210, 15%, 94%) 100%);
-    --gradient-hero: linear-gradient(160deg, hsl(200, 30%, 12%) 0%, hsl(200, 35%, 22%) 50%, hsl(200, 25%, 30%) 100%);
-    --shadow-card: 0 1px 3px hsl(200 30% 30% / 0.06), 0 6px 16px hsl(200 30% 30% / 0.04);
-    --shadow-elevated: 0 4px 12px hsl(200 30% 30% / 0.08), 0 16px 40px hsl(200 30% 30% / 0.06);
+    --gradient-brand: linear-gradient(135deg, hsl(198, 35%, 24%) 0%, hsl(198, 40%, 36%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(186, 55%, 42%) 0%, hsl(186, 50%, 36%) 100%);
+    --gradient-surface: linear-gradient(180deg, hsl(210, 20%, 99%) 0%, hsl(210, 16%, 95%) 100%);
+    --gradient-hero: linear-gradient(160deg, hsl(210, 40%, 10%) 0%, hsl(200, 38%, 18%) 50%, hsl(198, 35%, 26%) 100%);
+    --shadow-card: 0 1px 3px hsl(210 20% 20% / 0.04), 0 4px 12px hsl(210 20% 20% / 0.03);
+    --shadow-elevated: 0 4px 12px hsl(210 20% 20% / 0.06), 0 12px 32px hsl(210 20% 20% / 0.05);
     --font-display: 'Space Grotesk', sans-serif;
     --font-body: 'Inter', sans-serif;
 

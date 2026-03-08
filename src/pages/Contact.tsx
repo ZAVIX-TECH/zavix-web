@@ -118,7 +118,6 @@ const Contact = () => {
         </div>
       </section>
     </div>
-  );
-};
+    </PageTransition>
 
 export default Contact;

@@ -92,7 +92,6 @@ const Work = () => {
         </div>
       </section>
     </div>
-  );
-};
+    </PageTransition>
 
 export default Work;

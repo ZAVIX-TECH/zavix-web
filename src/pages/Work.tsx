@@ -18,22 +18,22 @@ const Work = () => {
   const filtered = active === "All" ? projects : projects.filter((p) => p.category === active);
 
   return (
-    <div className="pt-24 pb-16">
-      <section className="py-16 bg-gradient-hero">
+    <div className="pt-[72px]">
+      <section className="py-20 lg:py-24 bg-gradient-hero">
         <div className="container">
-          <h1 className="text-4xl sm:text-5xl font-display font-bold text-primary-foreground">Our Work</h1>
-          <p className="mt-4 text-primary-foreground/70 text-lg max-w-xl">Real projects. Measurable outcomes. Here's what we've built for companies like yours.</p>
+          <h1 className="text-[2rem] sm:text-[2.75rem] font-display font-bold text-primary-foreground tracking-[-0.025em] leading-[1.1]">Our Work</h1>
+          <p className="mt-5 text-primary-foreground/60 text-[15px] max-w-lg leading-[1.75] font-light">Real projects. Measurable outcomes. Here's what we've built for companies like yours.</p>
         </div>
       </section>
 
-      <section className="py-16">
+      <section className="py-20 lg:py-24">
         <div className="container">
-          <div className="flex flex-wrap gap-2 mb-10">
+          <div className="flex flex-wrap gap-2 mb-12">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setActive(cat)}
-                className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
+                className={`px-5 py-2 rounded-full text-[13px] font-medium tracking-wide transition-all ${
                   active === cat
                     ? "bg-gradient-brand text-primary-foreground"
                     : "bg-secondary text-secondary-foreground hover:bg-secondary/80"

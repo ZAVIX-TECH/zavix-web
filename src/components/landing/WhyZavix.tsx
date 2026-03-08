@@ -10,32 +10,32 @@ const differentiators = [
 
 const WhyZavix = () => {
   return (
-    <section className="py-24">
+    <section className="py-28 lg:py-32">
       <div className="container">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
           <div>
-            <span className="text-xs font-semibold tracking-widest uppercase text-accent">Why Zavix</span>
-            <h2 className="mt-3 text-3xl sm:text-4xl font-display font-bold text-foreground">
+            <span className="text-[11px] font-semibold tracking-[0.14em] uppercase text-accent">Why Zavix</span>
+            <h2 className="mt-4 text-[1.75rem] sm:text-[2.15rem] font-display font-bold text-foreground tracking-[-0.02em] leading-[1.15]">
               Built Different. <br />Built to Last.
             </h2>
-            <p className="mt-4 text-muted-foreground leading-relaxed max-w-lg">
+            <p className="mt-5 text-[15px] text-muted-foreground leading-[1.75] max-w-md">
               We combine startup agility with enterprise reliability. Every project gets senior-level engineers, transparent communication, and a relentless focus on outcomes.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {differentiators.map((d, i) => (
               <motion.div
                 key={d.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: i * 0.1 }}
-                className="p-6 rounded-xl bg-secondary/50 border border-border"
+                transition={{ duration: 0.4, delay: i * 0.08 }}
+                className="p-6 rounded-xl bg-secondary/40 border border-border"
               >
-                <d.icon className="text-accent mb-3" size={24} />
-                <h3 className="font-display font-semibold text-foreground mb-1.5">{d.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{d.desc}</p>
+                <d.icon className="text-accent mb-4" size={22} strokeWidth={1.8} />
+                <h3 className="font-display font-semibold text-[15px] text-foreground mb-2 tracking-[-0.01em]">{d.title}</h3>
+                <p className="text-[13px] text-muted-foreground leading-[1.7]">{d.desc}</p>
               </motion.div>
             ))}
           </div>

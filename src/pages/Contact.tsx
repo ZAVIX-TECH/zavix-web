@@ -21,41 +21,42 @@ const Contact = () => {
   };
 
   return (
-    <div className="pt-24 pb-16">
-      <section className="py-16 bg-gradient-hero">
+    <div className="pt-[72px]">
+      <section className="py-20 lg:py-24 bg-gradient-hero">
         <div className="container">
-          <h1 className="text-4xl sm:text-5xl font-display font-bold text-primary-foreground">Start a Project</h1>
-          <p className="mt-4 text-primary-foreground/70 text-lg max-w-xl">Tell us about your project and we'll get back to you within 24 hours with a plan.</p>
+          <h1 className="text-[2rem] sm:text-[2.75rem] font-display font-bold text-primary-foreground tracking-[-0.025em] leading-[1.1]">Start a Project</h1>
+          <p className="mt-5 text-primary-foreground/60 text-[15px] max-w-lg leading-[1.75] font-light">Tell us about your project and we'll get back to you within 24 hours with a plan.</p>
         </div>
       </section>
 
-      <section className="py-16">
+      <section className="py-20 lg:py-24">
         <div className="container">
-          <div className="grid lg:grid-cols-5 gap-12">
+          <div className="grid lg:grid-cols-5 gap-14 lg:gap-16">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0, x: -16 }}
               animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
               className="lg:col-span-3"
             >
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid sm:grid-cols-2 gap-4">
+              <form onSubmit={handleSubmit} className="space-y-7">
+                <div className="grid sm:grid-cols-2 gap-5">
                   <div>
-                    <label className="block text-sm font-medium text-foreground mb-1.5">Full Name *</label>
-                    <Input required placeholder="John Doe" />
+                    <label className="block text-[13px] font-medium text-foreground mb-2 tracking-wide">Full Name *</label>
+                    <Input required placeholder="John Doe" className="h-11" />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-foreground mb-1.5">Email *</label>
-                    <Input required type="email" placeholder="john@company.com" />
+                    <label className="block text-[13px] font-medium text-foreground mb-2 tracking-wide">Email *</label>
+                    <Input required type="email" placeholder="john@company.com" className="h-11" />
                   </div>
                 </div>
-                <div className="grid sm:grid-cols-2 gap-4">
+                <div className="grid sm:grid-cols-2 gap-5">
                   <div>
-                    <label className="block text-sm font-medium text-foreground mb-1.5">Company</label>
-                    <Input placeholder="Company name" />
+                    <label className="block text-[13px] font-medium text-foreground mb-2 tracking-wide">Company</label>
+                    <Input placeholder="Company name" className="h-11" />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-foreground mb-1.5">Budget Range</label>
-                    <select className="w-full h-10 rounded-md border border-input bg-background px-3 text-sm text-foreground">
+                    <label className="block text-[13px] font-medium text-foreground mb-2 tracking-wide">Budget Range</label>
+                    <select className="w-full h-11 rounded-lg border border-input bg-background px-3.5 text-[13.5px] text-foreground focus:outline-none focus:ring-2 focus:ring-ring">
                       <option>Select range</option>
                       <option>$5K – $15K</option>
                       <option>$15K – $50K</option>
@@ -65,8 +66,8 @@ const Contact = () => {
                   </div>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-1.5">Project Type</label>
-                  <select className="w-full h-10 rounded-md border border-input bg-background px-3 text-sm text-foreground">
+                  <label className="block text-[13px] font-medium text-foreground mb-2 tracking-wide">Project Type</label>
+                  <select className="w-full h-11 rounded-lg border border-input bg-background px-3.5 text-[13.5px] text-foreground focus:outline-none focus:ring-2 focus:ring-ring">
                     <option>Select type</option>
                     <option>Web Application</option>
                     <option>Mobile App</option>
@@ -76,23 +77,24 @@ const Contact = () => {
                   </select>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-1.5">Tell Us About Your Project *</label>
-                  <Textarea required rows={5} placeholder="Describe your project, goals, and timeline..." />
+                  <label className="block text-[13px] font-medium text-foreground mb-2 tracking-wide">Tell Us About Your Project *</label>
+                  <Textarea required rows={6} placeholder="Describe your project, goals, and timeline..." className="text-[13.5px]" />
                 </div>
                 <Button
                   type="submit"
                   disabled={loading}
-                  className="bg-gradient-accent text-accent-foreground font-semibold px-8 h-12 hover:opacity-90 transition-opacity"
+                  className="bg-gradient-accent text-accent-foreground font-medium text-[14px] tracking-wide px-8 h-12 hover:opacity-90 transition-opacity rounded-lg"
                 >
-                  {loading ? "Sending..." : <>Send Message <Send className="ml-2" size={16} /></>}
+                  {loading ? "Sending..." : <>Send Message <Send className="ml-2.5" size={15} /></>}
                 </Button>
               </form>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
+              initial={{ opacity: 0, x: 16 }}
               animate={{ opacity: 1, x: 0 }}
-              className="lg:col-span-2 space-y-8"
+              transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+              className="lg:col-span-2 space-y-10"
             >
               {[
                 { icon: Mail, title: "Email Us", detail: "hello@zavixtech.com" },
@@ -101,11 +103,11 @@ const Contact = () => {
               ].map((item) => (
                 <div key={item.title} className="flex gap-4">
                   <div className="w-11 h-11 rounded-lg bg-gradient-brand flex items-center justify-center text-primary-foreground shrink-0">
-                    <item.icon size={18} />
+                    <item.icon size={17} strokeWidth={1.8} />
                   </div>
                   <div>
-                    <h3 className="font-display font-semibold text-foreground">{item.title}</h3>
-                    <p className="text-sm text-muted-foreground mt-0.5">{item.detail}</p>
+                    <h3 className="font-display font-semibold text-[14.5px] text-foreground tracking-[-0.01em]">{item.title}</h3>
+                    <p className="text-[13px] text-muted-foreground mt-1 leading-[1.6]">{item.detail}</p>
                   </div>
                 </div>
               ))}

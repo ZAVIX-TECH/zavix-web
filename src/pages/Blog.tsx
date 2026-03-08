@@ -1,5 +1,6 @@
 import { Clock, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import PageTransition from "@/components/PageTransition";
 
 const posts = [
   { title: "Why We Chose Next.js for Enterprise Clients", excerpt: "A deep dive into our decision framework for choosing React meta-frameworks.", tag: "Engineering", readTime: "8 min", date: "Feb 2026" },

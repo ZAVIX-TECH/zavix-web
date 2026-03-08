@@ -1,6 +1,7 @@
 import { MapPin, Briefcase, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import PageTransition from "@/components/PageTransition";
 
 const jobs = [
   { title: "Senior Full-Stack Engineer", team: "Engineering", location: "Remote", type: "Full-time" },

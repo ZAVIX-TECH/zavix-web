@@ -58,7 +58,7 @@ const Navbar = () => {
 
         {/* Mobile toggle */}
         <button
-          className={`lg:hidden p-2 transition-colors ${scrolled ? "text-foreground" : "text-primary-foreground"}`}
+          className="lg:hidden p-2 text-foreground transition-colors"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >

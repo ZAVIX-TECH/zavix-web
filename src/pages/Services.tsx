@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Code2, Smartphone, Cloud, Plug, Users, ArrowRight, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import PageTransition from "@/components/PageTransition";
 
 const services = [
   {

@@ -17,19 +17,19 @@ const team = [
 
 const About = () => {
   return (
-    <div className="pt-24 pb-16">
-      <section className="py-16 bg-gradient-hero">
+    <div className="pt-[72px]">
+      <section className="py-20 lg:py-24 bg-gradient-hero">
         <div className="container">
-          <h1 className="text-4xl sm:text-5xl font-display font-bold text-primary-foreground">About Zavix</h1>
-          <p className="mt-4 text-primary-foreground/70 text-lg max-w-xl">Engineering excellence, powered by people who care about your success.</p>
+          <h1 className="text-[2rem] sm:text-[2.75rem] font-display font-bold text-primary-foreground tracking-[-0.025em] leading-[1.1]">About Zavix</h1>
+          <p className="mt-5 text-primary-foreground/60 text-[15px] max-w-lg leading-[1.75] font-light">Engineering excellence, powered by people who care about your success.</p>
         </div>
       </section>
 
       {/* Story */}
-      <section className="py-16">
+      <section className="py-20 lg:py-24">
         <div className="container max-w-3xl">
-          <h2 className="text-3xl font-display font-bold text-foreground mb-6">Our Story</h2>
-          <div className="prose text-muted-foreground leading-relaxed space-y-4">
+          <h2 className="text-[1.5rem] sm:text-[1.85rem] font-display font-bold text-foreground mb-8 tracking-[-0.02em]">Our Story</h2>
+          <div className="text-[15px] text-muted-foreground leading-[1.85] space-y-5">
             <p>Zavix Technologies was founded with a simple belief: great software should be accessible to every ambitious company, not just those with unlimited budgets.</p>
             <p>We combine deep technical expertise with a genuine commitment to partnership. Whether you're a startup shipping your first MVP or an enterprise modernizing legacy systems, we bring the same intensity and craftsmanship to every engagement.</p>
             <p>Today, we serve clients across 12+ countries, building everything from consumer-facing mobile apps to complex enterprise platforms.</p>
@@ -38,22 +38,22 @@ const About = () => {
       </section>
 
       {/* Values */}
-      <section className="py-16 bg-gradient-surface">
+      <section className="py-20 lg:py-24 bg-gradient-surface">
         <div className="container">
-          <h2 className="text-3xl font-display font-bold text-foreground text-center mb-12">Our Values</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <h2 className="text-[1.5rem] sm:text-[1.85rem] font-display font-bold text-foreground text-center mb-14 tracking-[-0.02em]">Our Values</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {values.map((v, i) => (
               <motion.div
                 key={v.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="p-6 rounded-xl bg-card border border-border shadow-card text-center"
+                transition={{ delay: i * 0.08 }}
+                className="p-7 rounded-xl bg-card border border-border shadow-card text-center"
               >
-                <v.icon className="mx-auto text-accent mb-4" size={28} />
-                <h3 className="font-display font-semibold text-foreground mb-2">{v.title}</h3>
-                <p className="text-sm text-muted-foreground">{v.desc}</p>
+                <v.icon className="mx-auto text-accent mb-5" size={24} strokeWidth={1.8} />
+                <h3 className="font-display font-semibold text-[15px] text-foreground mb-2 tracking-[-0.01em]">{v.title}</h3>
+                <p className="text-[13px] text-muted-foreground leading-[1.7]">{v.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -61,26 +61,26 @@ const About = () => {
       </section>
 
       {/* Team */}
-      <section className="py-16">
+      <section className="py-20 lg:py-24">
         <div className="container">
-          <h2 className="text-3xl font-display font-bold text-foreground text-center mb-12">Meet the Team</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <h2 className="text-[1.5rem] sm:text-[1.85rem] font-display font-bold text-foreground text-center mb-14 tracking-[-0.02em]">Meet the Team</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {team.map((member, i) => (
               <motion.div
                 key={member.name}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="text-center p-6 rounded-xl bg-card border border-border shadow-card"
+                transition={{ delay: i * 0.08 }}
+                className="text-center p-7 rounded-xl bg-card border border-border shadow-card"
               >
-                <div className="w-20 h-20 mx-auto rounded-full bg-gradient-brand flex items-center justify-center text-primary-foreground font-display font-bold text-xl mb-4">
+                <div className="w-[72px] h-[72px] mx-auto rounded-full bg-gradient-brand flex items-center justify-center text-primary-foreground font-display font-bold text-[18px] tracking-wide mb-5">
                   {member.initials}
                 </div>
-                <h3 className="font-display font-semibold text-foreground">{member.name}</h3>
-                <p className="text-sm text-muted-foreground mt-1">{member.role}</p>
-                <a href="#" className="inline-block mt-3 text-primary hover:text-accent transition-colors">
-                  <Linkedin size={18} />
+                <h3 className="font-display font-semibold text-[14.5px] text-foreground tracking-[-0.01em]">{member.name}</h3>
+                <p className="text-[12.5px] text-muted-foreground mt-1.5">{member.role}</p>
+                <a href="#" className="inline-block mt-4 text-primary hover:text-accent transition-colors">
+                  <Linkedin size={16} strokeWidth={1.8} />
                 </a>
               </motion.div>
             ))}

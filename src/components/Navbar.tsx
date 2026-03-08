@@ -25,7 +25,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-background/95 backdrop-blur-xl shadow-card border-b border-border" : "bg-transparent"}`}>
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-background/95 backdrop-blur-xl border-b border-border ${scrolled ? "shadow-card" : ""}`}>
       <div className="container flex items-center justify-between h-[72px]">
         <Link to="/" className="flex items-center gap-2.5">
           <img src={zavixLogo} alt="Zavix Technologies" className="h-9 w-auto" />
@@ -40,7 +40,7 @@ const Navbar = () => {
               className={`px-4 py-2 text-[13px] font-medium tracking-wide rounded-md transition-all duration-200 hover:text-foreground ${
                 location.pathname === link.path
                   ? "text-primary"
-                  : scrolled ? "text-muted-foreground" : "text-primary-foreground/80 hover:text-primary-foreground"
+                  : "text-muted-foreground"
               }`}
             >
               {link.label}
@@ -58,7 +58,7 @@ const Navbar = () => {
 
         {/* Mobile toggle */}
         <button
-          className={`lg:hidden p-2 transition-colors ${scrolled ? "text-foreground" : "text-primary-foreground"}`}
+          className="lg:hidden p-2 text-foreground transition-colors"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >

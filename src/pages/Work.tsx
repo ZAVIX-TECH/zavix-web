@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import PageTransition from "@/components/PageTransition";
 
 import projectFinflow from "@/assets/project-finflow.jpg";
 import projectMedconnect from "@/assets/project-medconnect.jpg";

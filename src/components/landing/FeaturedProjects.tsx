@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, ExternalLink } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+
+import projectFinflow from "@/assets/project-finflow.jpg";
+import projectMedconnect from "@/assets/project-medconnect.jpg";
+import projectLogitrack from "@/assets/project-logitrack.jpg";
 
 const projects = [
   {
@@ -9,21 +13,21 @@ const projects = [
     category: "SaaS",
     description: "Real-time financial analytics platform processing 2M+ transactions daily for a fintech startup.",
     tags: ["React", "Node.js", "PostgreSQL", "AWS"],
-    color: "from-blue-600/20 to-cyan-500/20",
+    image: projectFinflow,
   },
   {
     title: "MedConnect Mobile",
     category: "Mobile",
     description: "HIPAA-compliant telemedicine app connecting 10,000+ patients with healthcare providers.",
     tags: ["React Native", "Firebase", "WebRTC"],
-    color: "from-emerald-600/20 to-teal-500/20",
+    image: projectMedconnect,
   },
   {
     title: "LogiTrack Enterprise",
     category: "Web",
     description: "Fleet management system reducing operational costs by 35% for a logistics company.",
     tags: ["Next.js", "Python", "Redis", "GCP"],
-    color: "from-orange-600/20 to-amber-500/20",
+    image: projectLogitrack,
   },
 ];
 
@@ -55,8 +59,12 @@ const FeaturedProjects = () => {
               transition={{ duration: 0.5, delay: i * 0.08 }}
               className="group rounded-xl overflow-hidden bg-card border border-border shadow-card hover:shadow-elevated transition-all duration-300"
             >
-              <div className={`h-48 bg-gradient-to-br ${project.color} flex items-center justify-center`}>
-                <ExternalLink className="text-foreground/15 group-hover:text-foreground/30 transition-colors" size={44} />
+              <div className="h-48 overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
               </div>
               <div className="p-6 lg:p-7">
                 <span className="text-[10px] font-semibold uppercase tracking-[0.12em] text-accent">{project.category}</span>

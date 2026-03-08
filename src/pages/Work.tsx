@@ -1,16 +1,22 @@
 import { useState } from "react";
-import { ExternalLink } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+
+import projectFinflow from "@/assets/project-finflow.jpg";
+import projectMedconnect from "@/assets/project-medconnect.jpg";
+import projectLogitrack from "@/assets/project-logitrack.jpg";
+import projectPaybridge from "@/assets/project-paybridge.jpg";
+import projectEduplatform from "@/assets/project-eduplatform.jpg";
+import projectGreencart from "@/assets/project-greencart.jpg";
 
 const categories = ["All", "Web", "Mobile", "SaaS", "API"];
 
 const projects = [
-  { title: "FinFlow Dashboard", category: "SaaS", description: "Real-time financial analytics processing 2M+ daily transactions.", tags: ["React", "Node.js", "PostgreSQL", "AWS"], color: "from-blue-600/20 to-cyan-500/20" },
-  { title: "MedConnect Mobile", category: "Mobile", description: "HIPAA-compliant telemedicine app for 10,000+ patients.", tags: ["React Native", "Firebase", "WebRTC"], color: "from-emerald-600/20 to-teal-500/20" },
-  { title: "LogiTrack Enterprise", category: "Web", description: "Fleet management system reducing costs by 35%.", tags: ["Next.js", "Python", "Redis", "GCP"], color: "from-orange-600/20 to-amber-500/20" },
-  { title: "PayBridge API", category: "API", description: "Payment orchestration layer handling $50M+ monthly volume.", tags: ["Node.js", "Stripe", "PostgreSQL"], color: "from-violet-600/20 to-purple-500/20" },
-  { title: "EduPlatform LMS", category: "SaaS", description: "Learning management system serving 25,000 students across 3 universities.", tags: ["React", "Django", "AWS", "Redis"], color: "from-pink-600/20 to-rose-500/20" },
-  { title: "GreenCart Mobile", category: "Mobile", description: "Sustainable grocery delivery app with route optimization.", tags: ["Flutter", "Node.js", "MongoDB"], color: "from-green-600/20 to-lime-500/20" },
+  { title: "FinFlow Dashboard", category: "SaaS", description: "Real-time financial analytics processing 2M+ daily transactions.", tags: ["React", "Node.js", "PostgreSQL", "AWS"], image: projectFinflow },
+  { title: "MedConnect Mobile", category: "Mobile", description: "HIPAA-compliant telemedicine app for 10,000+ patients.", tags: ["React Native", "Firebase", "WebRTC"], image: projectMedconnect },
+  { title: "LogiTrack Enterprise", category: "Web", description: "Fleet management system reducing costs by 35%.", tags: ["Next.js", "Python", "Redis", "GCP"], image: projectLogitrack },
+  { title: "PayBridge API", category: "API", description: "Payment orchestration layer handling $50M+ monthly volume.", tags: ["Node.js", "Stripe", "PostgreSQL"], image: projectPaybridge },
+  { title: "EduPlatform LMS", category: "SaaS", description: "Learning management system serving 25,000 students across 3 universities.", tags: ["React", "Django", "AWS", "Redis"], image: projectEduplatform },
+  { title: "GreenCart Mobile", category: "Mobile", description: "Sustainable grocery delivery app with route optimization.", tags: ["Flutter", "Node.js", "MongoDB"], image: projectGreencart },
 ];
 
 const Work = () => {
@@ -60,8 +66,12 @@ const Work = () => {
                   transition={{ delay: i * 0.06 }}
                   className="group rounded-xl overflow-hidden bg-card border border-border shadow-card hover:shadow-elevated transition-all duration-300"
                 >
-                  <div className={`h-44 bg-gradient-to-br ${project.color} flex items-center justify-center`}>
-                    <ExternalLink className="text-foreground/15 group-hover:text-foreground/30 transition-colors" size={40} />
+                  <div className="h-44 overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
                   </div>
                   <div className="p-6 lg:p-7">
                     <span className="text-[10px] font-semibold uppercase tracking-[0.12em] text-accent">{project.category}</span>

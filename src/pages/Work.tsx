@@ -25,6 +25,7 @@ const Work = () => {
   const filtered = active === "All" ? projects : projects.filter((p) => p.category === active);
 
   return (
+    <PageTransition>
     <div className="pt-[72px]">
       <section className="py-20 lg:py-24 bg-gradient-hero">
         <div className="container">

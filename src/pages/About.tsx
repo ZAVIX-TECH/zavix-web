@@ -89,6 +89,7 @@ const About = () => {
         </div>
       </section>
     </div>
+    </PageTransition>
   );
 };
 

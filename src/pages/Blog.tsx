@@ -47,6 +47,7 @@ const Blog = () => {
         </div>
       </section>
     </div>
+    </PageTransition>
   );
 };
 

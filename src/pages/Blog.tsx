@@ -10,6 +10,7 @@ const posts = [
 ];
 
 const Blog = () => {
+  return (
     <PageTransition>
     <div className="pt-[72px]">
       <section className="py-20 lg:py-24 bg-gradient-hero">

@@ -71,6 +71,7 @@ const Careers = () => {
         </div>
       </section>
     </div>
+    </PageTransition>
   );
 };
 

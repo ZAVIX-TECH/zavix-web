@@ -55,21 +55,21 @@ const Work = () => {
               {filtered.map((project, i) => (
                 <motion.div
                   key={project.title}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 16 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.08 }}
+                  transition={{ delay: i * 0.06 }}
                   className="group rounded-xl overflow-hidden bg-card border border-border shadow-card hover:shadow-elevated transition-all duration-300"
                 >
                   <div className={`h-44 bg-gradient-to-br ${project.color} flex items-center justify-center`}>
-                    <ExternalLink className="text-foreground/20 group-hover:text-foreground/40 transition-colors" size={44} />
+                    <ExternalLink className="text-foreground/15 group-hover:text-foreground/30 transition-colors" size={40} />
                   </div>
-                  <div className="p-6">
-                    <span className="text-xs font-semibold uppercase tracking-wider text-accent">{project.category}</span>
-                    <h3 className="mt-2 font-display font-semibold text-lg text-foreground">{project.title}</h3>
-                    <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{project.description}</p>
-                    <div className="mt-4 flex flex-wrap gap-1.5">
+                  <div className="p-6 lg:p-7">
+                    <span className="text-[10px] font-semibold uppercase tracking-[0.12em] text-accent">{project.category}</span>
+                    <h3 className="mt-2.5 font-display font-semibold text-[16px] text-foreground tracking-[-0.01em]">{project.title}</h3>
+                    <p className="mt-2.5 text-[13.5px] text-muted-foreground leading-[1.7]">{project.description}</p>
+                    <div className="mt-5 flex flex-wrap gap-1.5">
                       {project.tags.map((tag) => (
-                        <span key={tag} className="px-2.5 py-1 text-xs rounded-full bg-secondary text-secondary-foreground font-medium">{tag}</span>
+                        <span key={tag} className="px-2.5 py-1 text-[11px] rounded-full bg-secondary text-secondary-foreground font-medium tracking-wide">{tag}</span>
                       ))}
                     </div>
                   </div>

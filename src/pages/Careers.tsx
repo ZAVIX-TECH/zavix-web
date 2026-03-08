@@ -14,6 +14,7 @@ const perks = ["Remote-first culture", "Flexible hours", "Learning budget", "Hea
 
 const Careers = () => {
   return (
+    <PageTransition>
     <div className="pt-[72px]">
       <section className="py-20 lg:py-24 bg-gradient-hero">
         <div className="container">

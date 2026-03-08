@@ -1,5 +1,6 @@
 import { Target, Eye, Heart, Lightbulb, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
+import PageTransition from "@/components/PageTransition";
 
 const values = [
   { icon: Target, title: "Outcome-Driven", desc: "We measure success by your business results, not lines of code." },
@@ -17,6 +18,7 @@ const team = [
 
 const About = () => {
   return (
+    <PageTransition>
     <div className="pt-[72px]">
       <section className="py-20 lg:py-24 bg-gradient-hero">
         <div className="container">
@@ -88,6 +90,7 @@ const About = () => {
         </div>
       </section>
     </div>
+    </PageTransition>
   );
 };
 

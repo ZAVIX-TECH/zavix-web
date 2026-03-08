@@ -1,3 +1,4 @@
+import PageTransition from "@/components/PageTransition";
 import HeroSection from "@/components/landing/HeroSection";
 import ServicesOverview from "@/components/landing/ServicesOverview";
 import WhyZavix from "@/components/landing/WhyZavix";
@@ -8,7 +9,7 @@ import CTASection from "@/components/landing/CTASection";
 
 const Index = () => {
   return (
-    <>
+    <PageTransition>
       <HeroSection />
       <ServicesOverview />
       <WhyZavix />
@@ -16,7 +17,7 @@ const Index = () => {
       <Testimonials />
       <TechStack />
       <CTASection />
-    </>
+    </PageTransition>
   );
 };
 

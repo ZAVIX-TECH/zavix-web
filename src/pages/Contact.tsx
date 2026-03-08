@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { motion } from "framer-motion";
+import PageTransition from "@/components/PageTransition";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -21,6 +22,7 @@ const Contact = () => {
   };
 
   return (
+    <PageTransition>
     <div className="pt-[72px]">
       <section className="py-20 lg:py-24 bg-gradient-hero">
         <div className="container">
@@ -116,6 +118,7 @@ const Contact = () => {
         </div>
       </section>
     </div>
+    </PageTransition>
   );
 };
 

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Code2, Smartphone, Cloud, Plug, Users, ArrowRight, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import PageTransition from "@/components/PageTransition";
 
 const services = [
   {
@@ -33,6 +34,7 @@ const services = [
 
 const Services = () => {
   return (
+    <PageTransition>
     <div className="pt-[72px]">
       <section className="py-20 lg:py-24 bg-gradient-hero">
         <div className="container">
@@ -96,6 +98,7 @@ const Services = () => {
         </div>
       </section>
     </div>
+    </PageTransition>
   );
 };
 

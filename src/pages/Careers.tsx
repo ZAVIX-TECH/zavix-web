@@ -1,6 +1,7 @@
 import { MapPin, Briefcase, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import PageTransition from "@/components/PageTransition";
 
 const jobs = [
   { title: "Senior Full-Stack Engineer", team: "Engineering", location: "Remote", type: "Full-time" },
@@ -13,6 +14,7 @@ const perks = ["Remote-first culture", "Flexible hours", "Learning budget", "Hea
 
 const Careers = () => {
   return (
+    <PageTransition>
     <div className="pt-[72px]">
       <section className="py-20 lg:py-24 bg-gradient-hero">
         <div className="container">
@@ -69,6 +71,7 @@ const Careers = () => {
         </div>
       </section>
     </div>
+    </PageTransition>
   );
 };
 
